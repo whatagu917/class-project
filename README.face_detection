@@ -1,0 +1,2 @@
+このコードは、画像内の顔を検出し、検出した顔に枠を描画するプログラムです。
+OpenCVの CascadeClassifier を使用して、事前学習済みのHaar cascade分類器で顔検出を行います。

@@ -1,2 +1,21 @@
 このコードは、画像内の顔を検出し、検出した顔に枠を描画するプログラムです。
 OpenCVの CascadeClassifier を使用して、事前学習済みのHaar cascade分類器で顔検出を行います。
+
+```python
+import cv2
+from matplotlib import pyplot as plt
+
+# Haar Cascade分類器を使用した顔検出プログラム
+# 画像の中の顔を検出し、赤枠を描画する
+
+# 画像の読み込み
+img = cv2.imread("snap.jpg")
+
+# 画像をRGB形式に変換（OpenCVのBGR形式をMatplotlibで表示するため）
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+
+# Haar Cascade分類器の読み込み（顔検出モデル）
+cascade = cv2.CascadeClassifier('./haarcascade_frontalface_default.xml')
+
+# 画像をグレースケールに変換（顔検出の精度向上）
+gray = cv
